@@ -1,16 +1,13 @@
 package main
 
 import (
+	"Myportfolio/internal/handlers"
 	"fmt"
 	"net/http"
 )
 
-func homeHandler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintln(w, "Hello, Go Web!")
-}
-
 func main() {
-	http.HandleFunc("/", homeHandler)
+	http.HandleFunc("/", handlers.HomeHandler)
 
 	fmt.Println("Server started at http://localhost:8080")
 	if err := http.ListenAndServe(":8080", nil); err != nil {
