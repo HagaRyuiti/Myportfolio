@@ -1,7 +1,7 @@
 package main
 
 import (
-	"Myportfolio/internal/handlers"
+	"Myportfolio/handlers"
 	"fmt"
 	"net/http"
 )
